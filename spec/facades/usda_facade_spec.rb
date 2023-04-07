@@ -14,7 +14,7 @@ RSpec.describe UsdaFacade do
     
     it "returns top 10 Food objects from a keyword search" do
       expect(@food_facade.food_search("sweet potatoes").count).to eq(10)
-      
+      # binding.pry
     end
   end
 end
