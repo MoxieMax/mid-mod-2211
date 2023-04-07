@@ -9,15 +9,15 @@ RSpec.describe "/", type: :feature do
   describe "as a user when I visit welcome#index" do
     it "has a form" do
       expect(current_path).to eq("/")
-      expect(page).to have_field("Search")
+      expect(page).to have_field(:q)
       expect(page).to have_button("Search")
     end
     
     describe "can search for an ingredient" do
       it "" do
-        fill_in("Search", with: "sweet potatoes")
+        fill_in(:q, with: "sweet potatoes")
         
-        click_button "Search"
+        click_button("Search")
         
         expect(current_path).to eq("/foods")
       end
